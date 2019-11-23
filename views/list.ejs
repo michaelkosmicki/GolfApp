@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Golf Tournament App</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+<h1>Welcome to the Golf App</h1>
+<h2>Choose your Roster</h2>
+
+<div class="row">
+  <form action="/" method = "post">
+  <div class="col-md-3">
+<!--<input type="text" name="newitem" placeholder="Points">  -->
+</div>
+<div class="col-md-3">
+  <select name="newitem">
+    <% Object.values(golfers).forEach(function (golfer){ %>
+    <option> <%= golfer %> </option>
+    <% }); %>
+
+
+  </select>
+</div>
+<div class="col-md-3">
+<button type="submit" name="button">Add</button>
+</div>
+</form>
+<div class="col-md-3">
+  <p>
+    Your Roster:
+    </p>
+<ul>
+
+  <li>Ben Watson</li>
+  <% Object.values(golfer).forEach(function (golfer){ %>
+  <li> <%= golfer %> </li>
+<% }); %>
+
+
+</ul>
+</div>
+</div>
+</div>
+
+
+  </body>
+</html>
